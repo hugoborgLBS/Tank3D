@@ -14,4 +14,7 @@ public class TankData : ScriptableObject
 
     [Tooltip("Turn rate in degrees per second")]
     public float TurnRate = 120f;
+
+    [Tooltip("Turret rotation speed in degrees per second")]
+    public float TurretTurnRate = 180f;
 }

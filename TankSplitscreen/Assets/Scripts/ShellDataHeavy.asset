@@ -16,4 +16,4 @@ MonoBehaviour:
   AoE: 2
   Damage: 25
   FireRate: 5
-  Speed: 150
+  Speed: 30
