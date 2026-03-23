@@ -473,7 +473,7 @@ Transform:
   m_GameObject: {fileID: 1794325615}
   serializedVersion: 2
   m_LocalRotation: {x: -0.0091977455, y: 0.8330963, z: -0.53228414, w: -0.15013188}
-  m_LocalPosition: {x: 0.86, y: 5.2, z: 2.45}
+  m_LocalPosition: {x: 3.32, y: 5.69, z: 2.52}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -544,7 +544,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 4760242124920025570, guid: f307a0a4630cdad4b91745a0a4f16904, type: 3}
       propertyPath: m_Name
-      value: BulletPool
+      value: BulletPoolPlaceHolder
       objectReference: {fileID: 0}
     - target: {fileID: 8986124209866024972, guid: f307a0a4630cdad4b91745a0a4f16904, type: 3}
       propertyPath: m_LocalPosition.x
@@ -591,6 +591,67 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f307a0a4630cdad4b91745a0a4f16904, type: 3}
+--- !u!1001 &6397983714339310457
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 3361248577734575147, guid: f27101189840fc143b7137d9f5a6fae4, type: 3}
+      propertyPath: m_Name
+      value: tank_big_graphics
+      objectReference: {fileID: 0}
+    - target: {fileID: 6649866873957166147, guid: f27101189840fc143b7137d9f5a6fae4, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 1.08
+      objectReference: {fileID: 0}
+    - target: {fileID: 6649866873957166147, guid: f27101189840fc143b7137d9f5a6fae4, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6649866873957166147, guid: f27101189840fc143b7137d9f5a6fae4, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.32
+      objectReference: {fileID: 0}
+    - target: {fileID: 6649866873957166147, guid: f27101189840fc143b7137d9f5a6fae4, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6649866873957166147, guid: f27101189840fc143b7137d9f5a6fae4, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6649866873957166147, guid: f27101189840fc143b7137d9f5a6fae4, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6649866873957166147, guid: f27101189840fc143b7137d9f5a6fae4, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6649866873957166147, guid: f27101189840fc143b7137d9f5a6fae4, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6649866873957166147, guid: f27101189840fc143b7137d9f5a6fae4, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6649866873957166147, guid: f27101189840fc143b7137d9f5a6fae4, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8904686393059378973, guid: f27101189840fc143b7137d9f5a6fae4, type: 3}
+      propertyPath: bulletPool
+      value: 
+      objectReference: {fileID: 1828017070}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: f27101189840fc143b7137d9f5a6fae4, type: 3}
 --- !u!1001 &7743345278054690664
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -603,9 +664,13 @@ PrefabInstance:
       propertyPath: bulletPool
       value: 
       objectReference: {fileID: 1828017070}
+    - target: {fileID: 8432007747225175439, guid: 5ded35b46fd583748aec8ce289e1d64b, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 22100000, guid: 0f16a77b9e57d0a42ad837a320fddbaa, type: 2}
     - target: {fileID: 8523785158307151486, guid: 5ded35b46fd583748aec8ce289e1d64b, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: 3.91
       objectReference: {fileID: 0}
     - target: {fileID: 8523785158307151486, guid: 5ded35b46fd583748aec8ce289e1d64b, type: 3}
       propertyPath: m_LocalPosition.y
@@ -658,6 +723,7 @@ SceneRoots:
   m_Roots:
   - {fileID: 1794325618}
   - {fileID: 1215357237}
+  - {fileID: 6397983714339310457}
   - {fileID: 7743345278054690664}
   - {fileID: 302732359364161721}
   - {fileID: 673162122}
