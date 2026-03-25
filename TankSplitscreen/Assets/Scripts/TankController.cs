@@ -41,29 +41,50 @@ public class TankController : MonoBehaviour
 
     private void OnEnable()
     {
+        SubscribeMove();
+        SubscribeAim();
+
+        if (moveActionReference != null && moveActionReference.action != null)
+            moveActionReference.action.Enable();
+        if (aimActionReference != null && aimActionReference.action != null)
+            aimActionReference.action.Enable();
+    }
+
+    private void OnDisable()
+    {
+        UnsubscribeMove();
+        UnsubscribeAim();
+    }
+
+    private void SubscribeMove()
+    {
         if (moveActionReference != null && moveActionReference.action != null)
         {
             moveActionReference.action.performed += OnMove;
             moveActionReference.action.canceled += OnMove;
-            moveActionReference.action.Enable();
-        }
-
-        if (aimActionReference != null && aimActionReference.action != null)
-        {
-            aimActionReference.action.performed += OnAim;
-            aimActionReference.action.canceled += OnAim;
-            aimActionReference.action.Enable();
         }
     }
 
-    private void OnDisable()
+    private void UnsubscribeMove()
     {
         if (moveActionReference != null && moveActionReference.action != null)
         {
             moveActionReference.action.performed -= OnMove;
             moveActionReference.action.canceled -= OnMove;
         }
+    }
 
+    private void SubscribeAim()
+    {
+        if (aimActionReference != null && aimActionReference.action != null)
+        {
+            aimActionReference.action.performed += OnAim;
+            aimActionReference.action.canceled += OnAim;
+        }
+    }
+
+    private void UnsubscribeAim()
+    {
         if (aimActionReference != null && aimActionReference.action != null)
         {
             aimActionReference.action.performed -= OnAim;
@@ -71,12 +92,42 @@ public class TankController : MonoBehaviour
         }
     }
 
-    private void OnMove(InputAction.CallbackContext context)
+    // Public setters so input references can be assigned at runtime
+    public void SetMoveActionReference(InputActionReference reference)
+    {
+        UnsubscribeMove();
+        moveActionReference = reference;
+        SubscribeMove();
+        if (moveActionReference != null && moveActionReference.action != null)
+            moveActionReference.action.Enable();
+    }
+
+    public void SetAimActionReference(InputActionReference reference, AimInputType inputType = AimInputType.ScreenPosition)
+    {
+        UnsubscribeAim();
+        aimActionReference = reference;
+        aimInputType = inputType;
+        SubscribeAim();
+        if (aimActionReference != null && aimActionReference.action != null)
+            aimActionReference.action.Enable();
+    }
+
+    public void SetPlayerCamera(Camera cam)
+    {
+        playerCamera = cam;
+    }
+
+    public void SetTurretTransform(Transform t)
+    {
+        turretTransform = t;
+    }
+
+    public void OnMove(InputAction.CallbackContext context)
     {
         moveInput = context.ReadValue<Vector2>();
     }
 
-    private void OnAim(InputAction.CallbackContext context)
+    public void OnAim(InputAction.CallbackContext context)
     {
         Vector2 value = context.ReadValue<Vector2>();
 

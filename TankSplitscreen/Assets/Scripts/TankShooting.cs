@@ -53,7 +53,7 @@ public class TankShooting : MonoBehaviour
         FireShell();
     }
 
-    private void FireShell()
+    public void FireShell()
     {
         var obj = Instantiate(shellPrefab, firePoint.position, firePoint.rotation);
 
