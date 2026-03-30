@@ -1,0 +1,13 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!221 &22100000
+AnimatorOverrideController:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: bigTankAnim
+  m_Controller: {fileID: 9100000, guid: 0e2be5935de569547a24789cef91dc5b, type: 2}
+  m_Clips:
+  - m_OriginalClip: {fileID: 7400000, guid: dcd1af6c25064fd4482cef9af0717373, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 468449d6aa1620747be8efaec45b70ac, type: 2}
